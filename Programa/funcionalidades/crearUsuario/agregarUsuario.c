@@ -12,7 +12,7 @@ void agregarUsuarios(){
     do{
         system("clear");
         printf("\nIntroduce un nombre de maximo 15 caracteres...\n");
-        printf("Introduce el nombre del nombre: ");
+        printf("Introduce el nombre: ");
 
         if(scanf("%s",buff1) == 0)
             error(3);
@@ -22,7 +22,7 @@ void agregarUsuarios(){
     do{
         system("clear");
         printf("\nIntroduce un usuario de maximo 10 caracteres...\n");
-        printf("Introduce el nombre del usuario: ");
+        printf("Introduce un usuario: ");
         if(scanf("%s",buff2) == 0)
             error(3);
     }while(comprobarbuff(buff2,2) == 0);
@@ -31,7 +31,7 @@ void agregarUsuarios(){
     do{
         system("clear");
         printf("\nIntroduce un password de maximo 10 caracteres...\n");
-        printf("Introduce el nombre del password: ");
+        printf("Introduce el password: ");
         if(scanf("%s",buff3) == 0)
             error(3);
     }while(comprobarbuff(buff3,3) == 0);
