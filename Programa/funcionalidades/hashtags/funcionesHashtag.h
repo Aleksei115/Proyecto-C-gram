@@ -18,6 +18,7 @@ hashtags *aux;
 #include "mostrarHashtags.c"
 #include "AgregarHashtag.c"
 #include "EliminarHashtag.c"
+#include "agregarHashtagArchivo.c"
 
 // Incluyo el menu principal
 

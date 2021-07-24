@@ -1,5 +1,7 @@
 void mostrarHashtags(hashtags *aux){
 
+    //Mostramos nuestra estructura pila
+
     int a=0;
 
     if(aux != NULL){

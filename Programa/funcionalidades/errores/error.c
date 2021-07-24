@@ -7,7 +7,7 @@ void error(int tipo_de_error){
     switch (tipo_de_error){
 
         case 1:
-                printf("\n\nLo sentimos,hubo un error con el archivo Usuarios.dat...\nSaliendo del programa");
+                printf("\n\nLo sentimos,hubo un error con el archivo...\nSaliendo del programa");
             break;
 
         case 2:

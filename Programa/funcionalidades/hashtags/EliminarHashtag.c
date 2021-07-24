@@ -1,5 +1,7 @@
 hashtags *EliminarHashtag(hashtags **aux){
 
+    //Eliminamos los hashtags de nuestra estructura pila
+
     system("clear");
     int c;
 

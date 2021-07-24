@@ -6,8 +6,8 @@ int main(){
 
     // system("sleep 100s");
 
-    agregarUsuarios();
-    // Hashtags();
+    //agregarUsuarios();
+     Hashtags();
     // MenuPrincipal();
 
     return 0;

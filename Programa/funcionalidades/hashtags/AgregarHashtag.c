@@ -1,11 +1,14 @@
 void Hashtags();
-void AgregarHashtags(hashtags **aux){
+void AgregarHashtags(hashtags **aux){          
+
+    //Agregamos hashtags a nuestra estructura pila
+
     int c;
     char Hashtag[50];
 
     system("clear");
 
-    if (t == TAM){
+    if (t == TAM){         
         printf("\n\nSolo puedes introducir 5 #Hashtags\n\n");
         printf("Presiona 1 para regresar: ");
 
