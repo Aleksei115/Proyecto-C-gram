@@ -67,6 +67,8 @@ void agregarUsuarios(){
 
         crearCarpetas(usuario_tmp);
 
+        MenuPrincipal();
+
     }
 
 

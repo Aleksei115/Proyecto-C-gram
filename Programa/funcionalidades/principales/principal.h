@@ -28,9 +28,8 @@ typedef struct hashtags{
 typedef struct publicacion{
 
     int id;                             //se usar para poder usar una cola 
-    char nombreImagen[20];              //aqui se almacenará el nombre del archivo .txt
-    char descripcion[140];              //La descripcion que le agregará a su imagen
-    hashtags *pila_hashtags;            //Aqui se guardara la pila de hastags 
+    char nombreImagen[70];              //aqui se almacenará el nombre del archivo .txt
+
     struct publicacion *publicacion_sig;
 
 }publicacion;
@@ -67,12 +66,22 @@ typedef struct usuario{
 
     #include "../errores/error.c"
 
+// Funciones agregar Usuarios
+    #include "../crearUsuario/agregarUsuario.c"
+
+// Funciones que puede hacer el usuario en la app
+    #include "../menuDeUsuario/menuDeUsuario.c"
+
+
+// Funcion que autentifica el usuario para entrar
+    #include "../inicioSesion/inicioSesion.c"
 
 // archivos sobre el hashtag
     #include "../hashtags/MenuHashtags.c"
 
-// Funciones agregar Usuarios
-    #include "../crearUsuario/agregarUsuario.c"
+
+
+
 
 
 

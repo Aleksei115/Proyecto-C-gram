@@ -1,3 +1,7 @@
+void agregarUsuarios();                 
+void inicioSesion();
+void error(int);
+
 void MenuPrincipal(){
 
     int opcion;
@@ -22,14 +26,16 @@ void MenuPrincipal(){
             switch (opcion) {
 
                 case 1:
+                    agregarUsuarios();
                     break;
 
                 case 2:
+                    inicioSesion();
                     break;    
 
                 case 3:
                     printf("Gracias por usar la aplicacion, Adios!!\n");
-                    return;
+                    exit(1);
                     
             }
 
@@ -37,7 +43,7 @@ void MenuPrincipal(){
         }
         else{
             printf("\nOpcion no valida\n Salindo de la aplicacion\n");
-            return;
+            error(2);
         }
            
 

@@ -4,11 +4,7 @@
 
 int main(){
 
-    // system("sleep 100s");
-
-    //agregarUsuarios();
-     Hashtags();
-    // MenuPrincipal();
+    MenuPrincipal();
 
     return 0;
 }
