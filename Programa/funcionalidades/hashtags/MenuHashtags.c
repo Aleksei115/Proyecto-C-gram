@@ -30,7 +30,7 @@ void Hashtags(){
                     
 
                 case 3:
-                agregarHashtagArchivo(*aux);
+                
                     //Aqui va el regreso a menu usuario
                     return;
 

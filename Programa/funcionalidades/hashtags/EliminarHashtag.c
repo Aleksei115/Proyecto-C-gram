@@ -21,8 +21,7 @@ hashtags *EliminarHashtag(hashtags **aux){
             system("clear");
             Hashtags();    }
         else{
-            printf("\nOpcion Invalida\n\nSaliendo del programa...\n");
-            exit(1);}
+            error(2);}
 
         return newAp;
 
@@ -36,7 +35,6 @@ hashtags *EliminarHashtag(hashtags **aux){
             system("clear");
             Hashtags();    }
         else{
-            printf("\nOpcion Invalida\n\nSaliendo del programa...\n");
-            exit(1);}
+            error(2);}
     }
 }

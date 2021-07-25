@@ -16,14 +16,13 @@ void AgregarHashtags(hashtags **aux){
             system("clear");
             Hashtags();    }
         else{
-            printf("\nOpcion Invalida\n\nSaliendo del programa...\n");
-            exit(1);}
+            error(2);}
     }
     else{
 
-        printf("\nIntroduce tu hashtag:\n");
-        if (scanf("%s",Hashtag) != 1 || strlen(Hashtag) > 50)
-            exit(1);
+        printf("\nIntroduce tu hashtag de maximo 15 caracteres:\n");
+        if (scanf("%s",Hashtag) != 1 || strlen(Hashtag) > 15)
+            error(3);
 
         hashtags *nodo = (hashtags*)malloc(sizeof(hashtags));
         t ++;    
@@ -47,8 +46,7 @@ void AgregarHashtags(hashtags **aux){
             system("clear");
             Hashtags();    }
         else{
-            printf("\nOpcion Invalida\n\nSaliendo del programa...\n");
-            exit(1);}
+            error(2);}
 
 
     }
