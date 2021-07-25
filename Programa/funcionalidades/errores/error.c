@@ -11,7 +11,7 @@ void error(int tipo_de_error){
             break;
 
         case 2:
-                printf("\n\nLo sentimos,No introdujo un número correcto...\nSaliendo del programa");
+                printf("\n\nLo sentimos,No introdujo un numero correcto...\nSaliendo del programa");
             break;
 
         case 3:
