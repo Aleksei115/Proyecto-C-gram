@@ -10,7 +10,7 @@ void menuDeUsuario(usuario usuario_logeado){
     while (1) {
 
         printf("\n****************************************************************************\n");
-        printf("\n\t   B I E N V E N I D O   A  TU  MENU    DE  C - G R A M\n");
+        printf("\n\t   B I E N V E N I D O   A   T U   M E N U    D E   C - G R A M\n");
         printf("\n\t\t       Pantalla Inicial\n\n \nSelecciona una opcion:\n\n");
         printf("\n1 ---> Ver  tus publicaciones\n");
         printf("\n2 ---> Agregar Publicaciones  \n");
