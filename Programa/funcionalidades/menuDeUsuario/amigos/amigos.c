@@ -15,6 +15,7 @@ void amigos(usuario usuario_logeado){
         error(3);
     
     system("clear");
+    printf("Holaa");
     buscarAmigoEnArchivo(buff2);         // checar en archivo usuarios.txt que exista ese nombre de archivo
     // si no existe decirle que usuario no encontrado y opcion a regresar a menu usuario
     // si existe, guardar el nombre del usuario agregado al archivo amigos.txt dentro de la carpeta del usuario logeado
