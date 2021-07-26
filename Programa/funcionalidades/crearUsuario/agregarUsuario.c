@@ -44,13 +44,15 @@ void agregarUsuarios(){
         printf("\tIntroduce 1 para volver al registro de usuario\n");
         printf("\tIntroduce 2 para volver a la pantalla principal...\n");
         printf("\nOpcion: ");
-        if(scanf("%d",&op) == 1 )
+        if(scanf("%d",&op) == 1 ){
             if (op == 1)
                 agregarUsuarios();
             else if(op == 2)
                 MenuPrincipal();
             else
                 error(2);
+
+        }
         else
             error(2);
     }
@@ -61,7 +63,8 @@ void agregarUsuarios(){
         strcpy(usuario_tmp.password,buff3);
 
         usuario_tmp.lista_amigos = NULL;
-        usuario_tmp.cola_publicaciones = NULL;
+        usuario_tmp.cabeza_publi = NULL;
+        usuario_tmp.cola_publi = NULL;
 
         agregarUsuarioArchivo(usuario_tmp);
 
