@@ -31,7 +31,7 @@ void menuDeUsuario(usuario usuario_logeado){
             switch (opcion) {
 
                 case 1:
-                    agregarUsuarios();
+                    printf("Hola");
                     break;
 
                 case 2:
