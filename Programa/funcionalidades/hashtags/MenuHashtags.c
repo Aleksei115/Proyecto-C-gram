@@ -7,7 +7,7 @@ void Hashtags(){
     while (1) {
 
         printf("************************************************************");
-        printf("\n\n\t\t\t # H A S H T A G S\n\n\n");
+        printf("\n\n\t\t\t T O P  5  # H A S H T A G S\n\n\n");
         mostrarHashtags(aux);
         printf("\nQue deseas hacer?\n");
         printf("\n1 ---> Agregar #Hagstag \n");
