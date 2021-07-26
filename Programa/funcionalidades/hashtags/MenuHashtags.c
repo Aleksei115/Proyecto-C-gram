@@ -39,7 +39,7 @@ void Hashtags(){
 
         }
         else {
-            printf("\nOpcion no valida\n\nSaliendo del programa...\n\n");
+            error(2);
             break;
         }
 

@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "publicaciones.c": "cpp",
-        "menudeusuario.c": "cpp"
+        "menudeusuario.c": "cpp",
+        "limits": "cpp"
     }
 }

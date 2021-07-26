@@ -30,37 +30,37 @@ void menuDeUsuario(usuario usuario_logeado){
 
             switch (opcion) {
 
-                case 1:
-                    printf("Hola");
-                    break;
+                // case 1:
+                //     printf("Hola");
+                //     break;
 
-                case 2:
-                    inicioSesion();
-                    break;
+                // case 2:
+                //     inicioSesion();
+                //     break;
 
-                case 3:
-                    agregarUsuarios();
-                    break;
+                // case 3:
+                //     agregarUsuarios();
+                //     break;
 
                 case 4:
-                    inicioSesion();
+                    amigos(usuario_logeado);
                     break;  
 
-                case 5:
-                    agregarUsuarios();
-                    break;
+                // case 5:
+                //     agregarUsuarios();
+                //     break;
 
-                case 6:
-                    inicioSesion();
-                    break;   
+                // case 6:
+                //     inicioSesion();
+                //     break;   
 
-                case 7:
-                    inicioSesion();
-                    break;  
+                // case 7:
+                //     inicioSesion();
+                //     break;  
 
-                case 8:
-                    printf("Gracias por usar la aplicacion, Adios!!\n");
-                    exit(1);
+                // case 8:
+                //     printf("Gracias por usar la aplicacion, Adios!!\n");
+                //     exit(1);
                     
             }
 

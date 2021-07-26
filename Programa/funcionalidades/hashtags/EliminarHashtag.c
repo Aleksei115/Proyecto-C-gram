@@ -19,9 +19,11 @@ hashtags *EliminarHashtag(hashtags **aux){
 
         if (scanf("%d",&c) == 1 && c == 1){
             system("clear");
-            Hashtags();    }
-        else{
-            error(2);}
+            Hashtags();    
+        }
+        else
+            error(2);
+        
 
         return newAp;
 
@@ -33,8 +35,10 @@ hashtags *EliminarHashtag(hashtags **aux){
 
         if (scanf("%d",&c) == 1 && c == 1){
             system("clear");
-            Hashtags();    }
-        else{
-            error(2);}
+            Hashtags();    
+        }
+        else
+            error(2);
+        
     }
 }

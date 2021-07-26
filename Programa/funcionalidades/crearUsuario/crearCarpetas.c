@@ -14,6 +14,8 @@ void crearCarpetas(usuario usuario_creado){
 
     char carpetaUsuario[31] = "mkdir usuarios/";
 
+    char copiarPrimeraPubli[76] = "cp Programa/archivos/primeraPublicacionC-Gram.txt usuarios/";
+
 
     strcat(bufferCarpetaUsuario,usuario_creado.user_name);      //creamos el string mkdir user_name
 
@@ -37,6 +39,13 @@ void crearCarpetas(usuario usuario_creado){
     
     system(archivoAmigos);
 
+    // copiar primera publi al usuario
+
+    strcat(copiarPrimeraPubli,usuario_creado.user_name);
+    
+    strcat(copiarPrimeraPubli,bufferImg);
+
+    system(copiarPrimeraPubli);
 
 
 }

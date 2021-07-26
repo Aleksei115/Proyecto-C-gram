@@ -1,4 +1,5 @@
 void Hashtags();
+
 void AgregarHashtags(hashtags **aux){          
 
     //Agregamos hashtags a nuestra estructura pila
@@ -14,9 +15,11 @@ void AgregarHashtags(hashtags **aux){
 
         if (scanf("%d",&c) == 1 && c == 1){
             system("clear");
-            Hashtags();    }
-        else{
-            error(2);}
+            Hashtags();    
+        }
+        else
+            error(2);
+        
     }
     else{
 
@@ -44,9 +47,11 @@ void AgregarHashtags(hashtags **aux){
 
         if (scanf("%d",&c) == 1 && c == 1){
             system("clear");
-            Hashtags();    }
-        else{
-            error(2);}
+            Hashtags();    
+        }
+        else
+            error(2);    
+        
 
 
     }
