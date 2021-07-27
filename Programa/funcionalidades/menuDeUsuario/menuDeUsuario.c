@@ -30,9 +30,9 @@ void menuDeUsuario(usuario usuario_logeado){
 
             switch (opcion) {
 
-                // case 1:
-                //     printf("Hola");
-                //     break;
+                case 1:
+                    publicaciones(usuario_logeado,1);
+                    break;
 
                 // case 2:
                 //     inicioSesion();

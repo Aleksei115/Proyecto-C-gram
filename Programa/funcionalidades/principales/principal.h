@@ -44,7 +44,8 @@ typedef struct usuario{
 
 
     amigo *lista_amigos;        //Aqui se gurdará la lista de amigos como lista enlazada
-    publicacion *cola_publicaciones;
+    publicacion *cabeza_publi;
+    publicacion *cola_publi;  
 
 }usuario;
 
