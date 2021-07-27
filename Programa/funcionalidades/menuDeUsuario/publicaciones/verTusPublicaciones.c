@@ -6,14 +6,16 @@ void menuDeUsuario(usuario);
 void verTusPublicaciones(usuario usuario_logeado){
 
     system("clear");
+    // printf("Hola");
+    int id ;                                       //Asigna el id a las publicaciones conforme las vaya leyendo
 
-    int id = 1;                                       //Asigna el id a las publicaciones conforme las vaya leyendo
+    crearArchivoPublicaciones(usuario_logeado);     
 
-    crearArchivoPublicaciones(usuario_logeado);                 
+    char buffP[18] = "publicaciones.txt";        
 
     char buffArchivo[50] = "usuarios/";
 
-    char buffImg[23] = "/img/publicaciones.txt";
+    char buffImg[45] = "/img/archivoPublicaciones/publicaciones.txt";
 
     strcat(buffArchivo,usuario_logeado.user_name);
     
@@ -23,36 +25,29 @@ void verTusPublicaciones(usuario usuario_logeado){
     
     FILE *archivo = NULL;
 
-    char nombreArchivo[18] = "publicaciones.txt"; 
 
-    char buffCadenaDeNombrePublicacion[70];
+    char buffNombrePubli[10][30];
 
-    archivo = fopen(buffArchivo,"a");
+    archivo = fopen(buffArchivo,"r+");
 
     if (archivo == NULL)
         error(1);
 
-    fscanf(archivo,"%s",buffCadenaDeNombrePublicacion);
+    
+    // Llena el array nombresPublicaciones con los nombres de las primeras 10 publicaciones
+    id = 1;
 
-    while (1){
-        
-        printf("%s",buffCadenaDeNombrePublicacion);
-
-        break;
-
-        if (feof(archivo) || strcmp(buffCadenaDeNombrePublicacion,nombreArchivo)  == 0)
-            break;
-
-        crearNodoPublicacion(buffCadenaDeNombrePublicacion,id,&(usuario_logeado.cabeza_publi),&(usuario_logeado.cola_publi));                   //agrega un nodo publicacion a la cola de publicaciones
-        
+    while (!feof(archivo)){
+        fgets(buffNombrePubli[id-1],29,archivo);
+        // printf("%s",buffNombrePubli[id-1]);
+        crearNodoPublicacion(buffNombrePubli[id-1],id,&(usuario_logeado.cabeza_publi),&(usuario_logeado.cola_publi));
         id++;
-
+        
     }
 
     fclose(archivo);
 
-
-    // imprimirCola(&(usuario_logeado.cabeza_publi),usuario_logeado);
+    imprimirCola(&(usuario_logeado.cabeza_publi),usuario_logeado);
 
 }
 
@@ -60,17 +55,19 @@ void verTusPublicaciones(usuario usuario_logeado){
 
 void crearArchivoPublicaciones(usuario usuario_log){
 
-    char buff1[49] = "rm -f usuarios/";
+    char buff1[70] = "rm -f usuarios/";
 
-    char buff2[50] = "touch usuarios/";
+    char buff2[71] = "touch usuarios/";
 
-    char buff3[50] = "ls usuarios/";
+    char buff3[110] = "ls -p usuarios/";
 
-    char buffComando[40] = " >> usuarios/";
+    char buffComando[14] = " >> usuarios/";
 
-    char buffImg[23] = "/img/publicaciones.txt";
+    char buffImg[44] = "/img/archivoPublicaciones/publicaciones.txt";
 
     char buffImg2[5] = "/img";
+
+    char grep[13] = " | grep -v /";
 
     //Elimina el archivo publicaciones.txt
 
@@ -93,6 +90,8 @@ void crearArchivoPublicaciones(usuario usuario_log){
     strcat(buff3,usuario_log.user_name);    
 
     strcat(buff3,buffImg2);
+    
+    strcat(buff3,grep);
 
     strcat(buff3,buffComando);
 
@@ -102,76 +101,6 @@ void crearArchivoPublicaciones(usuario usuario_log){
     
     system(buff3);     
 
-    exit(1);
-
-
 }
 
 
-void imprimirCola(publicacion ** cabeza, usuario logeado){
-
-    int op;
-
-    system("clear");
-
-    publicacion *aux = *cabeza;
-
-    if (aux == NULL){
-        system("clear");
-        printf("Lo sentimos no tienes publicaciones !!!");
-        menuDeUsuario(logeado);
-    }
-
-    FILE *archivo = NULL;
-
-    char buff1[] = "usuarios/";
-
-    char nombreArchivo[100];
-
-    char buff2[] = "/img/";
-
-    char bufferRenglon[150];
-
-    if (archivo == NULL)
-        error(1);
-
-
-    while (aux != NULL){
-        memset(nombreArchivo,0,100);                //Resetea la cadena
-
-        strcat(nombreArchivo,buff1);
-        strcat(nombreArchivo,logeado.user_name);
-        strcat(nombreArchivo,buff2);
-        strcat(nombreArchivo,aux->nombreImagen); 
-
-        archivo = fopen(nombreArchivo,"a");
-
-        fscanf(archivo,"%s",bufferRenglon);
-
-        while (1){
-
-            printf("%s\n",bufferRenglon);
-
-            if (feof(archivo))
-                break;
-
-            fscanf(archivo,"%s",bufferRenglon);
-
-        }
-
-
-        printf("\n\nPulsa 1 para pasar a la siguiente Publicacion: ");
-
-        fclose(archivo);
-
-        if(scanf("%d",&op) == 1 && op ==1)
-            aux = aux->publicacion_sig;
-        else
-            error(2);
-
-    }
-
-
-    
-
-}

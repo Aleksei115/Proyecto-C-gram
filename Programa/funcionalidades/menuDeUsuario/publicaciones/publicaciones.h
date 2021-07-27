@@ -6,5 +6,6 @@
 
     #include "crearNodoPublicacion.c"
     #include "verTusPublicaciones.c"
+    #include "imprimirCola.c"
     
 #endif
