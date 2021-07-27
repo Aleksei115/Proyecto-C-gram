@@ -19,9 +19,9 @@ int comprobarbuff(char *cadena, int op){
             break;
 
 
-        // Comprueba que el nombre de archivo sea menor a 70 caracteres
+        // Comprueba que el nombre de archivo sea menor a 30 caracteres
         case 4:
-            if(strlen(cadena) > 70)
+            if(strlen(cadena) > 30)
                 return 0;
             break;
         

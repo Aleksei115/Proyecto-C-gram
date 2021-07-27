@@ -6,6 +6,12 @@ int main(){
 
     MenuPrincipal();
     // usuario ur1;
+    // char buff[] = "HOLA COMO ESTAS";
+
+        
+
+            
+    
 
     // printf("%d",&(ur1.cabeza_publi));
 

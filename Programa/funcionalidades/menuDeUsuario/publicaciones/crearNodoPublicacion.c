@@ -1,4 +1,8 @@
-void crearNodoPublicacion(char nombrePublicacion[70], int id, publicacion **cabeza, publicacion **cola){
+void crearNodoPublicacion(char nombrePublicacion[30], int id, publicacion **cabeza, publicacion **cola){
+
+    if(strcmp(nombrePublicacion,"publicaciones.txt") == 1)
+        return;
+
 
     if(id == 10)
         printf("Lo sentimos llegaste al maximo de publicaciones\nSi deseas puedes eliminar publicaciones");
@@ -16,6 +20,7 @@ void crearNodoPublicacion(char nombrePublicacion[70], int id, publicacion **cabe
         }
         else{
             publicacion *aux = *cola;
+
             aux->publicacion_sig = nueva_publi;
             *cola = nueva_publi;
             

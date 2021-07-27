@@ -1,6 +1,6 @@
 #define _PRUEBA
 
-
+char nombresPublicaciones[10][30];
 
 
 typedef struct amigo{
@@ -28,7 +28,7 @@ typedef struct hashtags{
 typedef struct publicacion{
 
     int id;                             //se usar para poder usar una cola 
-    char nombreImagen[70];              //aqui se almacenará el nombre del archivo .txt
+    char nombreImagen[30];              //aqui se almacenará el nombre del archivo .txt
 
     struct publicacion *publicacion_sig;
 
