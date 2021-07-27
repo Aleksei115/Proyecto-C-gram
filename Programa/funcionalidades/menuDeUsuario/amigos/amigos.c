@@ -38,7 +38,7 @@ void amigos(usuario usuario_logeado){
         
         agregarAmigoArchivo(usuario_logeado, aux_tmp);  
 
-        printf("\nUsuario Agregado....\n");              // al final USUARIOS AGREGADO Y volver a menu usuario
+        printf("\nUsuario Agregado exitosamente....\n");              // al final USUARIOS AGREGADO Y volver a menu usuario
         printf("\nIntroduce 1 para volver al menu \n");
         printf("\n-->  ");
         if(scanf("%d", &op) == 1){
