@@ -10,8 +10,6 @@ void agregarAmigoArchivo(usuario usuario_buscado, usuario usuario_deseado){
 
     strcat(bufferUsuario, buffArchivo);
 
-    printf("%s", bufferUsuario);
-
     FILE *archivo = NULL;
 
     archivo = fopen(bufferUsuario, "a"); // fopen("usuarios/fabiunam(usuario_logeado.user_name)/amigos.txt", "a")
