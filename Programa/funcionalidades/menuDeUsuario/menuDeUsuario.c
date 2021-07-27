@@ -42,9 +42,9 @@ void menuDeUsuario(usuario usuario_logeado){
                 //     agregarUsuarios();
                 //     break;
 
-                // case 4:
-                //     amigos(usuario_logeado);
-                //     break;  
+                 case 4:
+                    amigos(usuario_logeado);
+                    break;  
 
                 // case 5:
                 //     agregarUsuarios();
