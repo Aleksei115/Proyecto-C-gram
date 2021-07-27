@@ -5,5 +5,5 @@
 
     #include "publicaciones/publicaciones.c"
     #include "amigos/amigos.c"
-     
+
 #endif

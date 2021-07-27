@@ -54,13 +54,14 @@ void menuDeUsuario(usuario usuario_logeado){
                 //     inicioSesion();
                 //     break;   
 
-                // case 7:
-                //     inicioSesion();
-                //     break;  
+                 case 7:
+                    //Hashtags();
+                    break;  
 
-                // case 8:
-                //     printf("Gracias por usar la aplicacion, Adios!!\n");
-                //     exit(1);
+                 case 8:
+                    system("clear");
+                    printf("\nGracias por usar C - Gram, Adios!!\n");
+                    exit(1);
                     
             }
 

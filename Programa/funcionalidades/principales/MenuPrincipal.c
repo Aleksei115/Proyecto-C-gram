@@ -34,7 +34,8 @@ void MenuPrincipal(){
                     break;    
 
                 case 3:
-                    printf("Gracias por usar la aplicacion, Adios!!\n");
+                    system("clear");
+                    printf("\nGracias por usar C - Gram, Adios!!\n");
                     exit(1);
                     
             }

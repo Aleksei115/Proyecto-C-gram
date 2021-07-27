@@ -60,5 +60,5 @@ void amigos(usuario usuario_logeado){
     
 
 
-    exit(1);
+    
 }

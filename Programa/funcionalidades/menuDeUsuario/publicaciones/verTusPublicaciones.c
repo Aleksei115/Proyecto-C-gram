@@ -80,7 +80,7 @@ void crearArchivoPublicaciones(usuario usuario_log){
 
     system(buff1);             
 
-    // Crea el archivo publicaciones.tx 
+    // Crea el archivo publicaciones.txt 
 
     strcat(buff2,usuario_log.user_name);
 
