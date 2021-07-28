@@ -32,13 +32,13 @@ void verTusPublicaciones(usuario usuario_logeado){
     
     // Llena el array nombresPublicaciones con los nombres de las primeras 10 publicaciones
     
-    if(fgets(buffNombrePubli[id],30,archivo) != NULL){             //Obtengo al menos un dato
+    if(fscanf(archivo,"%s",buffNombrePubli[id]) != 0){             //Obtengo al menos un dato
         
         while (1){
             if(feof(archivo))
                 break;
             id++;
-            fgets(buffNombrePubli[id],30,archivo);
+            fscanf(archivo,"%s",buffNombrePubli[id]);
         }
     }
     else
@@ -49,7 +49,9 @@ void verTusPublicaciones(usuario usuario_logeado){
     for (int i = 0; i < id; i++)
         crearNodoPublicacion(buffNombrePubli[i],i,&cabeza_publi,&cola_publi,usuario_logeado.user_name);
 
-    imprimirCola(*cola_publi);
+    printf("%p %p %s %s\n",cola_publi, cabeza_publi, cabeza_publi->nombreImagen, cola_publi->nombreImagen);
+
+    imprimirCola(*cabeza_publi);
 
 
 }
