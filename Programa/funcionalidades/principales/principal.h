@@ -1,7 +1,6 @@
 #define _PRUEBA
 
-char nombresPublicaciones[10][30];
-
+char buffNombrePubli[10][30];
 
 typedef struct amigo{
 
@@ -28,6 +27,7 @@ typedef struct hashtags{
 typedef struct publicacion{
 
     int id;                             //se usar para poder usar una cola 
+    char nombreUsuario[11];
     char nombreImagen[30];              //aqui se almacenará el nombre del archivo .txt
 
     struct publicacion *publicacion_sig;
@@ -41,15 +41,14 @@ typedef struct usuario{
     char nombre[17];
     char user_name[12];
     char password[13];
-
-
-    amigo *lista_amigos;        //Aqui se gurdará la lista de amigos como lista enlazada
-    publicacion *cabeza_publi;
-    publicacion *cola_publi;  
-
 }usuario;
 
 
+amigo *lista_amigos;        //Aqui se gurdará la lista de amigos como lista enlazada
+publicacion *cabeza_publi;
+publicacion *cola_publi;  
+
+int id;
 
 
 // ---------------------------------------------

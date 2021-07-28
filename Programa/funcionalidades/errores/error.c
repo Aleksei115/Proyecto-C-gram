@@ -2,7 +2,7 @@
 
 void error(int tipo_de_error){
 
-    system("clear");
+    // system("clear");
 
     switch (tipo_de_error){
 

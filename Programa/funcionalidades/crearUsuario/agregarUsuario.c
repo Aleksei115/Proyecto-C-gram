@@ -61,11 +61,6 @@ void agregarUsuarios(){
         strcpy(usuario_tmp.nombre,buff1);
         strcpy(usuario_tmp.user_name,buff2);
         strcpy(usuario_tmp.password,buff3);
-
-        usuario_tmp.lista_amigos = NULL;
-        usuario_tmp.cabeza_publi = NULL;
-        usuario_tmp.cola_publi = NULL;
-
         agregarUsuarioArchivo(usuario_tmp);
 
         crearCarpetas(usuario_tmp);

@@ -1,4 +1,0 @@
-ab
-ac
-amigos.txt
-ax

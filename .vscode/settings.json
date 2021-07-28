@@ -3,6 +3,9 @@
         "publicaciones.c": "cpp",
         "menudeusuario.c": "cpp",
         "limits": "cpp",
-        "amigos.h": "c"
+        "amigos.h": "c",
+        "vertuspublicaciones.c": "cpp",
+        "crearnodopublicacion.c": "cpp",
+        "principal.h": "c"
     }
 }

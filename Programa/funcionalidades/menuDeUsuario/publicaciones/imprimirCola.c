@@ -1,21 +1,35 @@
-void imprimirCola(publicacion ** cabeza, usuario logeado){
-
+void imprimirCola(publicacion **cabeza){
 
     publicacion *aux = *cabeza;
+    FILE *r = NULL;
+    char caracter;
+    // char buffNombreArchivo[10][57];
 
-    if (aux == NULL){
-        printf("Lo sentimos no tienes elementos en la COLA");
-        return;
-    }
-    
-    printf("Cabeza--> ");
+    char buffNombre[55] = "usuarios/";
+
+    char buffLinea[150];
+
 
     while (aux != NULL){
-        printf("%s ",aux->nombreImagen);
+
+        strcat(buffNombre,aux->nombreUsuario);
+        strcat(buffNombre,"/img/");
+        strcat(buffNombre,aux->nombreImagen);
+
         aux = aux->publicacion_sig;
     }
 
-    printf("<--Cola");
-    
+        printf("%s",buffNombre);
+        r = fopen(buffNombre,"rt");
+
+        if (r == NULL)
+            error(1);
+
+        while(!feof(r)){
+            fgets(buffLinea,150,r);
+            printf("%s",buffLinea); 
+        }	    
+        fclose(r);
+
 
 }

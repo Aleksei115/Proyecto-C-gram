@@ -3,6 +3,10 @@ void inicioSesion();
 void error(int);
 
 void MenuPrincipal(){
+    
+    lista_amigos = NULL;
+    cabeza_publi = NULL;
+    cola_publi = NULL;
 
     int opcion;
 

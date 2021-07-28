@@ -1,5 +1,0 @@
-aleksei.txt
-fabian.txt
-imagen.txt
-imagen1.txt
-nombresImg.txt

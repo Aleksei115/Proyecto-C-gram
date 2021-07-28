@@ -1,17 +1,15 @@
-void crearNodoPublicacion(char nombrePublicacion[30], int id, publicacion **cabeza, publicacion **cola){
-
-    if(strcmp(nombrePublicacion,"publicaciones.txt") == 1)
-        return;
+void crearNodoPublicacion(char nombrePublicacion[30], int id,publicacion **cabeza, publicacion **cola, char usuario[11]){
 
 
     if(id == 10)
-        printf("Lo sentimos llegaste al maximo de publicaciones\nSi deseas puedes eliminar publicaciones");
+        printf("Lo sentimos llegaste al maximo de publicaciones\nSi deseas puedes eliminar publicaciones\nEl programa solo tomara 10 publicaciones");
     else{
         
         publicacion *nueva_publi = (publicacion*)malloc(sizeof(publicacion));
         
-        nueva_publi->id = id;
+        nueva_publi->id = id++;
         strcpy(nueva_publi->nombreImagen,nombrePublicacion);
+        strcpy(nueva_publi->nombreUsuario,usuario);
         nueva_publi->publicacion_sig = NULL;
 
         if (*cabeza == NULL){

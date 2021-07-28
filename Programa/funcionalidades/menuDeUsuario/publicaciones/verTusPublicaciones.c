@@ -1,15 +1,11 @@
-void crearArchivoPublicaciones(usuario);
-void imprimirCola(publicacion **,usuario);
+
+void imprimirCola(publicacion **);
 void menuDeUsuario(usuario);
-// void crearNodoPublicacion();
+
 
 void verTusPublicaciones(usuario usuario_logeado){
-
-    system("clear");
-    // printf("Hola");
-    int id ;                                       //Asigna el id a las publicaciones conforme las vaya leyendo
-
-    crearArchivoPublicaciones(usuario_logeado);     
+    
+    id = 0;
 
     char buffP[18] = "publicaciones.txt";        
 
@@ -35,72 +31,89 @@ void verTusPublicaciones(usuario usuario_logeado){
 
     
     // Llena el array nombresPublicaciones con los nombres de las primeras 10 publicaciones
-    id = 1;
-
-    while (!feof(archivo)){
-        fgets(buffNombrePubli[id-1],29,archivo);
-        // printf("%s",buffNombrePubli[id-1]);
-        crearNodoPublicacion(buffNombrePubli[id-1],id,&(usuario_logeado.cabeza_publi),&(usuario_logeado.cola_publi));
-        id++;
+    
+    if(fgets(buffNombrePubli[id],30,archivo) != NULL){             //Obtengo al menos un dato
         
+        while (1){
+            if(feof(archivo))
+                break;
+            id++;
+            fgets(buffNombrePubli[id],30,archivo);
+        }
     }
+    else
+        printf("No tienes Publicaciones...\n");
 
     fclose(archivo);
 
-    imprimirCola(&(usuario_logeado.cabeza_publi),usuario_logeado);
+    for (int i = 0; i < id; i++)
+        crearNodoPublicacion(buffNombrePubli[i],i,&cabeza_publi,&cola_publi,usuario_logeado.user_name);
+
+    imprimirCola(&cabeza_publi);
+
+  
+
+    // -------------------------------------------------------------------------------------------
+    // Aqui llenamos un array de las rutas de publicaciones
+
+
+
+    // publicacion *aux = usuario_logeado.cabeza_publi;
+
+
+
+    // int x = 0;
+
+    // int regresar;
+
+
+    // if (aux == NULL){
+    //     printf("Lo sentimos no tienes Publicaciones.....\n");
+    //     return;
+    // }
+
+    // while (aux != usuario_logeado.cola_publi->publicacion_sig){
+
+    //     strcpy(buffNombreArchivo[x],rUsuarios);
+    //     strcat(buffNombreArchivo[x],usuario_logeado.user_name);
+    //     strcat(buffNombreArchivo[x],rImg);
+    //     strcat(buffNombreArchivo[x],aux->nombreImagen);
+
+    //     printf("%s\n",buffNombreArchivo[x]);
+    //     archivo = fopen(buffNombreArchivo[x],"r+");
+
+    //     if (archivo == NULL)
+    //         error(1);
+
+    //     while (!feof(archivo)){
+    //         fgets(buff,60,archivo);
+    //         printf("%s\n",buff);
+    //     }
+        
+    //     printf("\n\n\tPulsa 1 para pasar a la siguiente publicacion: ");
+
+    //     if (scanf("%d",&regresar) == 0 && regresar != 1)
+    //         error(2);
+
+        
+    //     fclose(archivo);
+
+    //     aux = aux->publicacion_sig;
+    //     x++;
+
+  
+    // }
+
+    // free(aux);
+
+
+
+
+    // imprimirCola(&(usuario_logeado.cabeza_publi),&(usuario_logeado.cola_publi),usuario_logeado);
 
 }
 
 
 
-void crearArchivoPublicaciones(usuario usuario_log){
-
-    char buff1[70] = "rm -f usuarios/";
-
-    char buff2[71] = "touch usuarios/";
-
-    char buff3[110] = "ls -p usuarios/";
-
-    char buffComando[14] = " >> usuarios/";
-
-    char buffImg[44] = "/img/archivoPublicaciones/publicaciones.txt";
-
-    char buffImg2[5] = "/img";
-
-    char grep[13] = " | grep -v /";
-
-    //Elimina el archivo publicaciones.txt
-
-    strcat(buff1,usuario_log.user_name);
-
-    strcat(buff1,buffImg);
-
-    system(buff1);             
-
-    // Crea el archivo publicaciones.txt 
-
-    strcat(buff2,usuario_log.user_name);
-
-    strcat(buff2,buffImg);
-
-    system(buff2);       
-
-    //llena de nuevo el archivo usuarios.txt con los usuarios que existan al momento de logearse el usuario
-
-    strcat(buff3,usuario_log.user_name);    
-
-    strcat(buff3,buffImg2);
-    
-    strcat(buff3,grep);
-
-    strcat(buff3,buffComando);
-
-    strcat(buff3,usuario_log.user_name);
-
-    strcat(buff3,buffImg);
-    
-    system(buff3);     
-
-}
 
 
