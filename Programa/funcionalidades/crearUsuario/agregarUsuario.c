@@ -28,7 +28,7 @@ void agregarUsuarios(){
     }while(comprobarbuff(buff2,2) == 0);
 
 
-    do{
+    do{ 
         system("clear");
         printf("\nIntroduce un password de maximo 10 caracteres...\n");
         printf("Introduce el password: ");

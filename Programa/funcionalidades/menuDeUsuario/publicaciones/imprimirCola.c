@@ -1,37 +1,49 @@
-void imprimirCola(publicacion **cabeza){
+void imprimirCola(publicacion cabeza){
 
-    publicacion *aux = *cabeza;
+    // publicacion *aux = cabeza;
     FILE *r = NULL;
-    char nombreArchivo[55]; 
-    // char buffNombreArchivo[10][57];
+  
+    char *nuevo = NULL;
 
-    char buffNombre[55] = "usuarios/";
+    char buffNombre[20] = "usuarios/";
 
     char buffLinea[150];
 
+    // char nombreUsuario
 
-    while (aux != NULL){
 
-        strcat(buffNombre,aux->nombreUsuario);
+    // while (aux != NULL){
+        
+        strcat(buffNombre,cabeza.nombreUsuario);
         strcat(buffNombre,"/img/");
-        strcat(buffNombre,aux->nombreImagen);
+        strcat(buffNombre,cabeza.nombreImagen);
+        printf("%s",buffNombre);
 
-        strcpy(nombreArchivo,buffNombre);
-        aux = aux->publicacion_sig;
+
+        // strcpy(nombreArchivo,buffNombre);
+
+        // aux = aux->publicacion_sig;
+    // }
+    
+    
+    for (int i = 0; i < 55; i++){
+        printf("%i : %c\n",i,buffNombre[i]);
+        // strcat(nuevo,buffNombre);
     }
+    
+    // printf("%s",nuevo);
 
-    printf("%s",nombreArchivo);
-    r = fopen(nombreArchivo,"rt");
+    r = fopen(buffNombre,"r");
 
     if (r == NULL)
         error(1);
-
-    //     while(!feof(r)){
-    //         fgets(buffLinea,150,r);
-    //         printf("%s",buffLinea); 
-    //     }	    
+        
+        while(!feof(r)){
+            fgets(buffLinea,150,r);
+            printf("%s",buffLinea); 
+        }	    
     
-    // fclose(r);
+    fclose(r);
 
 
 }

@@ -1,5 +1,5 @@
 
-void imprimirCola(publicacion **);
+void imprimirCola(publicacion);
 void menuDeUsuario(usuario);
 
 
@@ -24,7 +24,7 @@ void verTusPublicaciones(usuario usuario_logeado){
 
     char buffNombrePubli[10][30];
 
-    archivo = fopen(buffArchivo,"rt");
+    archivo = fopen(buffArchivo,"r");
 
     if (archivo == NULL)
         error(1);
@@ -49,7 +49,7 @@ void verTusPublicaciones(usuario usuario_logeado){
     for (int i = 0; i < id; i++)
         crearNodoPublicacion(buffNombrePubli[i],i,&cabeza_publi,&cola_publi,usuario_logeado.user_name);
 
-    imprimirCola(&cabeza_publi);
+    imprimirCola(*cola_publi);
 
 
 }

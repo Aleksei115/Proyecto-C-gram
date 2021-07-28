@@ -3,7 +3,9 @@
 
 #ifdef _PRUEBA
 
-#include "buscarAmigoEnArchivo.c"
-#include "agregarAmigoArchivo.c"
+    #include "buscarAmigoEnArchivo.c"
+    #include "agregarAmigoArchivo.c"
+    #include "verAmigos.c"
+    #include "agregarAmigos.c"
      
 #endif
