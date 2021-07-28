@@ -2,7 +2,7 @@ void imprimirCola(publicacion **cabeza){
 
     publicacion *aux = *cabeza;
     FILE *r = NULL;
-    char caracter;
+    char nombreArchivo[55]; 
     // char buffNombreArchivo[10][57];
 
     char buffNombre[55] = "usuarios/";
@@ -16,20 +16,22 @@ void imprimirCola(publicacion **cabeza){
         strcat(buffNombre,"/img/");
         strcat(buffNombre,aux->nombreImagen);
 
+        strcpy(nombreArchivo,buffNombre);
         aux = aux->publicacion_sig;
     }
 
-        printf("%s",buffNombre);
-        r = fopen(buffNombre,"rt");
+    printf("%s",nombreArchivo);
+    r = fopen(nombreArchivo,"rt");
 
-        if (r == NULL)
-            error(1);
+    if (r == NULL)
+        error(1);
 
-        while(!feof(r)){
-            fgets(buffLinea,150,r);
-            printf("%s",buffLinea); 
-        }	    
-        fclose(r);
+    //     while(!feof(r)){
+    //         fgets(buffLinea,150,r);
+    //         printf("%s",buffLinea); 
+    //     }	    
+    
+    // fclose(r);
 
 
 }

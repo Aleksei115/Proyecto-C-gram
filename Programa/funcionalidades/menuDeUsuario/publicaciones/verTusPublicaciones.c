@@ -24,7 +24,7 @@ void verTusPublicaciones(usuario usuario_logeado){
 
     char buffNombrePubli[10][30];
 
-    archivo = fopen(buffArchivo,"r+");
+    archivo = fopen(buffArchivo,"rt");
 
     if (archivo == NULL)
         error(1);
@@ -51,65 +51,6 @@ void verTusPublicaciones(usuario usuario_logeado){
 
     imprimirCola(&cabeza_publi);
 
-  
-
-    // -------------------------------------------------------------------------------------------
-    // Aqui llenamos un array de las rutas de publicaciones
-
-
-
-    // publicacion *aux = usuario_logeado.cabeza_publi;
-
-
-
-    // int x = 0;
-
-    // int regresar;
-
-
-    // if (aux == NULL){
-    //     printf("Lo sentimos no tienes Publicaciones.....\n");
-    //     return;
-    // }
-
-    // while (aux != usuario_logeado.cola_publi->publicacion_sig){
-
-    //     strcpy(buffNombreArchivo[x],rUsuarios);
-    //     strcat(buffNombreArchivo[x],usuario_logeado.user_name);
-    //     strcat(buffNombreArchivo[x],rImg);
-    //     strcat(buffNombreArchivo[x],aux->nombreImagen);
-
-    //     printf("%s\n",buffNombreArchivo[x]);
-    //     archivo = fopen(buffNombreArchivo[x],"r+");
-
-    //     if (archivo == NULL)
-    //         error(1);
-
-    //     while (!feof(archivo)){
-    //         fgets(buff,60,archivo);
-    //         printf("%s\n",buff);
-    //     }
-        
-    //     printf("\n\n\tPulsa 1 para pasar a la siguiente publicacion: ");
-
-    //     if (scanf("%d",&regresar) == 0 && regresar != 1)
-    //         error(2);
-
-        
-    //     fclose(archivo);
-
-    //     aux = aux->publicacion_sig;
-    //     x++;
-
-  
-    // }
-
-    // free(aux);
-
-
-
-
-    // imprimirCola(&(usuario_logeado.cabeza_publi),&(usuario_logeado.cola_publi),usuario_logeado);
 
 }
 
