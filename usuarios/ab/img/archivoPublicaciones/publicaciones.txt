@@ -1,2 +1,4 @@
+a.txt
+b.txt
 primeraPublicacionC-Gram.txt
 prueba.txt

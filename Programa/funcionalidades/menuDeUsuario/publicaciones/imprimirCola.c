@@ -26,10 +26,10 @@ void imprimirCola(publicacion cabeza){
     // }
     
     
-    for (int i = 0; i < 55; i++){
-        printf("%i : %c\n",i,buffNombre[i]);
-        // strcat(nuevo,buffNombre);
-    }
+    // for (int i = 0; i < 55; i++){
+    //     printf("%i : %c\n",i,buffNombre[i]);
+    //     // strcat(nuevo,buffNombre);
+    // }
     
     // printf("%s",nuevo);
 
