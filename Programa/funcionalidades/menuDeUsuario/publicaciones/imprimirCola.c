@@ -1,31 +1,31 @@
-void imprimirCola(publicacion cabeza){
+void accederArchivo(char[]);
 
-    // publicacion *aux = cabeza;
-    FILE *r = NULL;
-  
-    char *nuevo = NULL;
+void imprimirCola(publicacion **cabeza){
 
-    char buffNombre[20] = "usuarios/";
+    publicacion *aux = *cabeza;
+    
+    char buffNombre[55];
+    
+    char usr[] = "usuarios/";
 
     char buffLinea[150];
 
-    // char nombreUsuario
+    while (aux != NULL){
 
-
-    // while (aux != NULL){
-        
-        strcat(buffNombre,cabeza.nombreUsuario);
+        memset(buffNombre,0,55);
+        strcat(buffNombre,usr);
+        strcat(buffNombre,aux->nombreUsuario);
         strcat(buffNombre,"/img/");
-        strcat(buffNombre,cabeza.nombreImagen);
-        printf("%s",buffNombre);
+        strcat(buffNombre,aux->nombreImagen);
 
+        accederArchivo(buffNombre);
+        // printf("%s\n",buffNombre);
+        aux = aux->publicacion_sig;
 
-        // strcpy(nombreArchivo,buffNombre);
-
-        // aux = aux->publicacion_sig;
-    // }
+    }
     
-    
+   
+
     // for (int i = 0; i < 55; i++){
     //     printf("%i : %c\n",i,buffNombre[i]);
     //     // strcat(nuevo,buffNombre);
@@ -33,7 +33,21 @@ void imprimirCola(publicacion cabeza){
     
     // printf("%s",nuevo);
 
-    r = fopen(buffNombre,"r");
+
+}
+
+
+void accederArchivo(char nombreArchivo[20]){
+
+    system("clear");
+
+    FILE *r = NULL;
+
+    char buffLinea[150];
+
+    int op;
+
+    r = fopen(nombreArchivo,"r");
 
     if (r == NULL)
         error(1);
@@ -44,6 +58,15 @@ void imprimirCola(publicacion cabeza){
         }	    
     
     fclose(r);
+
+    printf("\n\n Para acceder a la siguiente publicacion, presiona 1: ");
+
+    if(scanf("%d", &op) == 1){
+            system("clear");
+            return;
+    }
+    else 
+        error(2);
 
 
 }

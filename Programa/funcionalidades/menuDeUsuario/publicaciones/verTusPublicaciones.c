@@ -1,11 +1,15 @@
 
-void imprimirCola(publicacion);
+void imprimirCola(publicacion**);
 void menuDeUsuario(usuario);
 
 
 void verTusPublicaciones(usuario usuario_logeado){
+
+    cabeza_publi = NULL;
+    cola_publi = NULL;
     
     id = 0;
+    int op;
 
     char buffP[18] = "publicaciones.txt";        
 
@@ -23,6 +27,11 @@ void verTusPublicaciones(usuario usuario_logeado){
 
 
     char buffNombrePubli[10][30];
+
+    for (int i = 0; i < 10; i++)    
+        memset(buffNombrePubli[i],0,30);
+
+    
 
     archivo = fopen(buffArchivo,"r");
 
@@ -49,11 +58,18 @@ void verTusPublicaciones(usuario usuario_logeado){
     for (int i = 0; i < id; i++)
         crearNodoPublicacion(buffNombrePubli[i],i,&cabeza_publi,&cola_publi,usuario_logeado.user_name);
 
-    printf("%p %p %s %s\n",cola_publi, cabeza_publi, cabeza_publi->nombreImagen, cola_publi->nombreImagen);
+    // printf("%p %p %s %s\n",cola_publi, cabeza_publi, cabeza_publi->nombreImagen, cola_publi->nombreImagen);
 
-    imprimirCola(*cabeza_publi);
+    imprimirCola(&cabeza_publi);
 
-
+    printf("\n\n\tYa no tienes publicaciones\n\nIntroduce 1 para volver al menu \n");
+    printf("\n-->  ");
+    if(scanf("%d", &op) == 1){
+        system("clear");
+        menuDeUsuario(usuario_logeado);
+    }
+    else 
+        error(2);
 }
 
 
