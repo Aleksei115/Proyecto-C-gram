@@ -9,13 +9,14 @@ void publicaciones(usuario usuario_log ,int op){
             verTusPublicaciones(usuario_log);
             break;
         case 2:
-            // Si quieres agregar una publicacion añade tu imagen txt a esta ruta usuarios/nombreUsuario(user_)/img
-            // scanf para regresar a menu usuario
+
+            agregarPublicaciones(usuario_log);
             break;
 
         case 3:
-            // Si quieres eliminar una publicacion quita tu imagen txt de esta ruta usuarios/nombreUsuario(user_)/img
-            // scanf para regresar a menu usuario
+            
+            eliminarPublicaciones(usuario_log);
+
             break;
     }
 

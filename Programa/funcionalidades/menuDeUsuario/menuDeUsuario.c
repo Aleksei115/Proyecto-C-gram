@@ -34,13 +34,13 @@ void menuDeUsuario(usuario usuario_logeado){
                     publicaciones(usuario_logeado,1);
                     break;
 
-                // case 2:
-                //     inicioSesion();
-                //     break;
+                case 2:
+                    publicaciones(usuario_logeado, 2);
+                   break;
 
-                // case 3:
-                //     agregarUsuarios();
-                //     break;
+                case 3:
+                    publicaciones(usuario_logeado, 3);
+                    break;
 
                 //  case 4:
                 //     amigos(usuario_logeado);
@@ -68,7 +68,7 @@ void menuDeUsuario(usuario usuario_logeado){
 
         }
         else{
-            printf("\nOpcion no valida\n Salindo de la aplicacion\n");
+            printf("\nOpcion no valida\n Saliendo de la aplicacion\n");
             error(2);
         }
            
