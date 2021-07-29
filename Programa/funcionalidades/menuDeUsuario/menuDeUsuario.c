@@ -16,7 +16,7 @@ void menuDeUsuario(usuario usuario_logeado){
         printf("\n2 ---> Agregar Publicaciones  \n");
         printf("\n3 ---> Eliminar Publicaciones \n");
         printf("\n4 ---> Agregar Amigos \n");
-        printf("\n5 ---> Ver publicaciones de Amigos \n");
+        printf("\n5 ---> Ver mis Amigos \n");
         printf("\n6 ---> Eliminar Amigos \n");
         printf("\n7 ---> Ver el top 5 hashtags usado en México\n");
         printf("\n8 ---> Salir de la aplicacion \n");
@@ -42,9 +42,9 @@ void menuDeUsuario(usuario usuario_logeado){
                 //     agregarUsuarios();
                 //     break;
 
-                 case 4:
-                    amigos(usuario_logeado);
-                    break;  
+                //  case 4:
+                //     amigos(usuario_logeado);
+                //     break;  
 
                 // case 5:
                 //     agregarUsuarios();
