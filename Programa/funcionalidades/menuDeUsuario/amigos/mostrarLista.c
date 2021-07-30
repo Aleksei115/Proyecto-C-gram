@@ -11,6 +11,7 @@ void verAmigos(amigo **comienzo,usuario usuario_logeado){
     }
     else{
 
+        system("clear");
         printf("\nTus amigos son: \n\n");
 
         while (aux != NULL){
