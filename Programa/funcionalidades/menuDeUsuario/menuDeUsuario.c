@@ -1,6 +1,7 @@
 
 #include "usuario.h"
 
+
 void menuDeUsuario(usuario usuario_logeado){
 
     system("clear");
@@ -42,9 +43,9 @@ void menuDeUsuario(usuario usuario_logeado){
                     publicaciones(usuario_logeado, 3);
                     break;
 
-                //  case 4:
-                //     amigos(usuario_logeado);
-                //     break;  
+                 case 4:
+                    amigos(usuario_logeado,1);
+                    break;  
 
                 // case 5:
                 //     agregarUsuarios();

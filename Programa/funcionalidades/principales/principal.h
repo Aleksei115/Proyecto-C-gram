@@ -69,8 +69,12 @@ int id;
 // Funciones agregar Usuarios
     #include "../crearUsuario/agregarUsuario.c"
 
+    #include "../menuDeUsuario/amigos/amigos.c"
+
 // Funciones que puede hacer el usuario en la app
     #include "../menuDeUsuario/menuDeUsuario.c"
+
+    
 
 
 // Funcion que autentifica el usuario para entrar

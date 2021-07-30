@@ -10,7 +10,7 @@ void agregarAmigoArchivo(usuario usuario_buscado, usuario usuario_deseado){
 
     strcat(bufferUsuario, buffArchivo);
 
-    printf("%s", bufferUsuario);
+    //printf("%s", bufferUsuario);
 
     FILE *archivo = NULL;
 
@@ -19,7 +19,8 @@ void agregarAmigoArchivo(usuario usuario_buscado, usuario usuario_deseado){
     if (archivo == NULL)
         error(1);
 
-    fprintf(archivo,"%s\n",usuario_deseado.user_name); 
+    fprintf(archivo,"%s",usuario_deseado.user_name); 
+    fprintf(archivo, "\n");
 
     fclose(archivo);    
   

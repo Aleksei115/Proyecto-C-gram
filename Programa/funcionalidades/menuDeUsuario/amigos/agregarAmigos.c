@@ -1,4 +1,4 @@
-void menuDeUsuario();
+void menuDeUsuario(usuario);
 
 void agregarAmigos(usuario usuario_logeado){
 
@@ -18,7 +18,7 @@ void agregarAmigos(usuario usuario_logeado){
             error(3);
     }while(comprobarbuff(buff2,2) == 0);
     
-    if(buscarAmigoEnArchivo(buff2) == 2){         // checar en archivo usuarios.txt que exista ese nombre de archivo
+    if(buscarAmigoEnArchivo(buff2,usuario_logeado,1) == 2){         // checar en archivo usuarios.txt que exista ese nombre de archivo
 
         system("clear");  
         printf("\nUsuario no encontrado...\n");       // si no existe decirle que usuario no encontrado y opcion a regresar a menu usuario
@@ -32,9 +32,23 @@ void agregarAmigos(usuario usuario_logeado){
             error(2);
    
     }
-    else{
+        if(buscarAmigoEnArchivo(buff2,usuario_logeado,2) == 1){         // checar en archivo usuarios.txt que exista ese nombre de archivo
+
+            system("clear");  
+            printf("\nEste Usuario ya es tu amigo...\n");       // si no existe decirle que usuario no encontrado y opcion a regresar a menu usuario
+            printf("\nIntroduce 1 para volver al menu \n");
+            printf("\n-->  ");
+            if(scanf("%d", &op) == 1){
+                system("clear");
+                menuDeUsuario(usuario_logeado);
+            }
+            else 
+                error(2);
+
+        }
+
         strcpy(aux_tmp.user_name, buff2); 
-        
+            
         agregarAmigoArchivo(usuario_logeado, aux_tmp);  
 
         printf("\nUsuario Agregado exitosamente....\n");              // al final USUARIOS AGREGADO Y volver a menu usuario
@@ -45,5 +59,6 @@ void agregarAmigos(usuario usuario_logeado){
             menuDeUsuario(usuario_logeado);
         }
         else 
-            error(2);     
+            error(2);      
+    
 }

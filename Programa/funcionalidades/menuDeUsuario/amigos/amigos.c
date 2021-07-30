@@ -2,31 +2,17 @@
 
 
 
-void amigos(usuario usuario_logeado,int op){
+void amigos(usuario usuario_log,int op){
 
     
     switch (op){
 
         case 1:
-            agregarAmigos(usuario_logeado);
+            agregarAmigos(usuario_log);
             break;
 
 
     }
 
 
-
-
-
-    
-
     }
-
-
-             
-    
-    
-
-
-    
-}
