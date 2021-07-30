@@ -47,16 +47,16 @@ void menuDeUsuario(usuario usuario_logeado){
                     amigos(usuario_logeado,1);
                     break;  
 
-                // case 5:
-                //     agregarUsuarios();
-                //     break;
+                case 5:
+                    amigos(usuario_logeado,2);
+                    break;
 
-                // case 6:
-                //     inicioSesion();
-                //     break;   
+                case 6:
+                    amigos(usuario_logeado,3);
+                    break;   
 
                  case 7:
-                    //Hashtags();
+                    Hashtags();
                     break;  
 
                  case 8:

@@ -2,6 +2,8 @@
 
 void Hashtags(){
 
+    system("clear");
+
     int opcion;
 
     while (1) {

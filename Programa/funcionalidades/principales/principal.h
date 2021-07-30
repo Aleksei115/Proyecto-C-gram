@@ -62,6 +62,10 @@ int id;
 
     #include "MenuPrincipal.c"
 
+
+// archivos sobre el hashtag
+    #include "../hashtags/MenuHashtags.c"
+
 // Incorpora el archivo de errores
 
     #include "../errores/error.c"
@@ -74,14 +78,10 @@ int id;
 // Funciones que puede hacer el usuario en la app
     #include "../menuDeUsuario/menuDeUsuario.c"
 
-    
-
-
 // Funcion que autentifica el usuario para entrar
     #include "../inicioSesion/inicioSesion.c"
 
-// archivos sobre el hashtag
-    #include "../hashtags/MenuHashtags.c"
+
 
 
 

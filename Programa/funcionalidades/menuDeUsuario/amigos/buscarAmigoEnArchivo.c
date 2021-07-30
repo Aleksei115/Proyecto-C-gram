@@ -46,8 +46,6 @@ int buscarAmigoEnArchivo(char const *usr_deseado,usuario user ,int o){
 
         while (1){
 
-        
-
             if (feof(ptr) || strcmp(buffAmigo,usr_deseado)  == 0)
                 break;
 
