@@ -1,0 +1,3 @@
+gato.txt
+primeraPublicacionC-Gram.txt
+pusheen.txt

@@ -29,12 +29,11 @@ void Hashtags(){
                 case 2:
                     EliminarHashtag(&aux);
                     break;
-                    
 
                 case 3:
-                
                     //Aqui va el regreso a menu usuario
                     return;
+                    break;
 
                     
             }

@@ -47,13 +47,23 @@ void agregarAmigos(usuario usuario_logeado){
 
         }
 
-        strcpy(aux_tmp.user_name, buff2); 
-            
-        agregarAmigoArchivo(usuario_logeado, aux_tmp);  
+        if(strcmp(usuario_logeado.user_name,buff2) == 0){
+            system("clear");   
+            printf("\nNo puedes agregarte a ti mismo como amigo, lo sentimos :(\n");
+            printf("\nIntroduce 1 para volver al menu \n");
+            printf("\n-->  ");
+        }
+        else{
+            strcpy(aux_tmp.user_name, buff2); 
+                
+            agregarAmigoArchivo(usuario_logeado, aux_tmp);  
 
-        printf("\nUsuario Agregado exitosamente....\n");              // al final USUARIOS AGREGADO Y volver a menu usuario
-        printf("\nIntroduce 1 para volver al menu \n");
-        printf("\n-->  ");
+            printf("\nUsuario Agregado exitosamente....\n");              // al final USUARIOS AGREGADO Y volver a menu usuario
+            printf("\nIntroduce 1 para volver al menu \n");
+            printf("\n-->  ");
+        }
+
+
         if(scanf("%d", &op) == 1){
             system("clear");
             menuDeUsuario(usuario_logeado);

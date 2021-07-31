@@ -3,7 +3,7 @@ void menuDeUsuario(usuario);
 void eliminarAmigos(usuario usuario_logeado){
 
     char rm[20] = "rm -f ";
-    char mv[20] = "mv ";
+    char mv[80] = "mv -f ";
 
     int op;
 
@@ -14,6 +14,8 @@ void eliminarAmigos(usuario usuario_logeado){
     char bufferUsuario[24] = "usuarios/";
 
     char buffArchivo[24] = "/amigos.txt";
+
+    char buffUsrAmigoR[30] = " usuarios/";
 
 
     strcat(bufferUsuario,usuario_logeado.user_name);
@@ -49,7 +51,7 @@ void eliminarAmigos(usuario usuario_logeado){
                 error(3);
         }while(comprobarbuff(buff2,2) == 0);
         
-        if(buscarAmigoEnArchivo(buff2,usuario_logeado,1) == 2){         // checar en archivo usuarios.txt que exista ese nombre de archivo
+        if(buscarAmigoEnArchivo(buff2,usuario_logeado,2) == 2){         // checar en archivo usuarios.txt que exista ese nombre de archivo
 
             system("clear");  
             printf("\nUsuario no encontrado...\n");       // si no existe decirle que usuario no encontrado y opcion a regresar a menu usuario
@@ -99,8 +101,14 @@ void eliminarAmigos(usuario usuario_logeado){
 
                 strcat(rm,bufferUsuario);
                 strcat(mv,bufferUsuario2);
-                strcat(mv," ");
-                strcat(mv,bufferUsuario);
+
+                
+                strcat(buffUsrAmigoR,usuario_logeado.user_name);
+                strcat(buffUsrAmigoR,buffArchivo);
+
+                strcat(mv,buffUsrAmigoR);
+
+                // printf("%s",mv);
 
                 system(rm);      //Si el archivo esta en solo lectura se eliminara
                 system(mv);

@@ -4,6 +4,8 @@ void error(int);
 
 void MenuPrincipal(){
     
+    system("clear");
+
     lista_amigos = NULL;
     cabeza_publi = NULL;
     cola_publi = NULL;

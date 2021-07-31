@@ -1,4 +1,3 @@
-a.txt
-b.txt
+anonymous.txt
+navidad.txt
 primeraPublicacionC-Gram.txt
-prueba.txt
